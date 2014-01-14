@@ -1,0 +1,8 @@
+[vcenter]
+host: changeme
+port: 443
+username: changeme
+password: changeme
+
+[sessionCtrl]
+max_idle_hours: 24
