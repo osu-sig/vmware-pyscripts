@@ -1,0 +1,11 @@
+[main]
+# Enable debugging output (yes|no)
+EnableDebugging = yes
+# Timezone for output (format: America/Los_Angeles)
+Timezone = America/Los_Angeles
+# vSphere hostname
+VSphereHost = changeme
+# vSphere port
+VSpherePort = 443
+# Enable verification of vSphere SSL certificate (yes|no)
+VSphereVerifySSL = yes

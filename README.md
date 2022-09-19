@@ -29,7 +29,28 @@ Using a virtualenv is highly recommended.
 
 1. Install packages in `requirements.txt`.
 1. Clone this repo.
-1. Copy `vmware-pyscripts.conf-dist` to `vmware-pyscripts.conf` and edit as necessary.
+
+## Configuration
+
+1. Copy `vmware-pyscripts.conf-dist` to `vmware-pyscripts.conf` and edit as needed:
+
+```
+[main]
+# Enable debugging output (yes|no)
+EnableDebugging = yes
+# Timezone for output (format: America/Los_Angeles)
+Timezone = America/Los_Angeles
+# vSphere hostname
+VSphereHost = changeme
+# vSphere port
+VSpherePort = 443
+# Enable verification of vSphere SSL certificate (yes|no)
+VSphereVerifySSL = yes
+```
+
+2. Set vSphere API credentials as environment variables:
+- `VSPHERE_USERNAME`
+- `VSPHERE_PASSWORD`
 
 ## Script Index
 

@@ -11,7 +11,6 @@ class GlobalConfig:
         self.VSPHERE_PORT = config.get('main', 'VSpherePort')
         self.VSPHERE_VERIFY_SSL = config.getboolean('main', 'VSphereVerifySSL')
         self.IS_DEBUG = config.getboolean('main', 'EnableDebugging')
-        self.LOG_DIR = config.get('logging', 'LogDir')
-        self.TIMEZONE = config.get('logging', 'Timezone')
+        self.TIMEZONE = config.get('main', 'Timezone')
         self.VSPHERE_USERNAME = os.getenv('VSPHERE_USERNAME')
         self.VSPHERE_PASSWORD = os.getenv('VSPHERE_PASSWORD')
