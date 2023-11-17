@@ -15,9 +15,9 @@ A collection of python scripts to automate and extract reporting information fro
 
 pip packages:
 
-- [pyvmomi]()
-- [pendulum]()
-- [docopt]()
+- [pyvmomi](https://github.com/vmware/pyvmomi)
+- [pendulum](https://pendulum.eustace.io/)
+- [docopt-ng](https://github.com/jazzband/docopt-ng)
 
 Full tested package requirements are defined in `requirements.txt`
 
