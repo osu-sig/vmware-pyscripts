@@ -21,7 +21,7 @@ pip packages:
 
 Full tested package requirements are defined in `requirements.txt`
 
-These scripts have been tested on VMware vSphere 7.0.
+These scripts have been tested on VMware vSphere 7.0.3 using Python 3.11.
 
 ## Install
 
