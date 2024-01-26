@@ -49,6 +49,10 @@ class SnapshotControl:
             # get specific VMs
             vms = self.vsapi.get_vms(vm_names)
 
+        if len(vms) == 0:
+            print("No VMs found.")
+            return
+
         # setup in-memory sqlite datastore
         snapdb = sqlite3.connect(':memory:')
         cursor = snapdb.cursor()
@@ -175,7 +179,6 @@ class SnapshotControl:
         print(f"Deleting snapshot '{snap.name}' from {vm.name}...")
         WaitForTask(snap.snapshot.RemoveSnapshot_Task(removeChildren=False))
         print("Done.")
-        self.list_snapshots([vm_name])
 
     def delete_snapshots(self, vm_name):
         vm = self.vsapi.get_vm(vm_name)
@@ -193,7 +196,6 @@ class SnapshotControl:
             print(f"Deleting snapshot '{snap.name}' from {vm.name}...")
             WaitForTask(snap.snapshot.RemoveSnapshot_Task(removeChildren=False))
         print("Done.")
-        self.list_snapshots([vm_name])
 
 
 if __name__ == '__main__':

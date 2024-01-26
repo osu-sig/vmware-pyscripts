@@ -45,6 +45,7 @@ class vSphere:
         all_vms = obj_view.view
         obj_view.Destroy()
 
+        target_vms = set(vm_names)
         res = []
         for vm in all_vms:
             if not include_templates and vm.summary.config.template:
@@ -52,10 +53,10 @@ class vSphere:
 
             if is_get_all:
                 res.append(vm)
-            elif vm.name in vm_names:
+            elif vm.name in target_vms:
                 res.append(vm)
-                vm_names.remove(vm.name)
-                if len(vm_names) == 0: break
+                target_vms.remove(vm.name)
+                if len(target_vms) == 0: break
 
         return res
 
