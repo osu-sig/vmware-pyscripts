@@ -35,6 +35,7 @@ class vSphere:
 
     def get_vms(self, vm_names=None, include_templates=False):
         if vm_names is None:
+            vm_names = []
             is_get_all = True
         else:
             is_get_all = False
